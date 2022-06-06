@@ -1,24 +1,77 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
-
-//create your first component
 const Home = () => {
+	const [todoList, setTodoList] = useState([]);
+
+	useEffect(() => {
+		//logica
+		fetch("https://assets.breatheco.de/apis/fake/todos/user/IvanGonzalezRecruiter", {
+			method: "GET",
+			headers: {
+				"Content-Type": "application/json",
+			},
+		})
+			.then((resp) => {
+				console.log("STATUS");
+				console.log(resp.status);
+				return resp.json();
+			})
+			.then((data) => {
+				setTodoList(data);
+			})
+			.catch((error) => {
+				//manejo de errores
+				console.log(error);
+			});
+	}, []);
+
 	return (
 		<div>
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+			<h1 className="text-center mt-5">Fetch</h1>
+			{todoList.map((item, index) => (
+				<div key={index}>
+					<p>{item.label}</p>
+				</div>
+			))}
+		</div>
+	);
+};
+
+export default Home;import React, { useState, useEffect } from "react";
+
+const Home = () => {
+	const [todoList, setTodoList] = useState([]);
+
+	useEffect(() => {
+		//logica
+		fetch("https://assets.breatheco.de/apis/fake/todos/user/IvanGonzalezRecruiter", {
+			method: "GET",
+			headers: {
+				"Content-Type": "application/json",
+			},
+		})
+			.then((resp) => {
+				console.log("STATUS");
+				console.log(resp.status);
+				return resp.json();
+			})
+			.then((data) => {
+				setTodoList(data);
+			})
+			.catch((error) => {
+				//manejo de errores
+				console.log(error);
+			});
+	}, []);
+
+	return (
+		<div>
+			<h1 className="text-center mt-5">Fetch</h1>
+			{todoList.map((item, index) => (
+				<div key={index}>
+					<p>{item.label}</p>
+				</div>
+			))}
 		</div>
 	);
 };
