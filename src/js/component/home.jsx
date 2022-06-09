@@ -12,13 +12,16 @@ const Home = () => {
 		setListaTareas(tempLista);
 		setTareas("");
 		console.log(tempLista);
-		fetch("https://assets.breatheco.de/apis/fake/todos/user/karenvicent", {
-			method: "PUT",
-			headers: {
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify(tempLista),
-		})
+		fetch(
+			"https://assets.breatheco.de/apis/fake/todos/user/IvanGonzalezRecruiter",
+			{
+				method: "PUT",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(tempLista),
+			}
+		)
 			.then((resp) => {
 				console.log("STATUS");
 				console.log(resp.status);
@@ -40,13 +43,16 @@ const Home = () => {
 		setListaTareas(listaVacia);
 		let tempEliminado = [...listaTareas];
 		console.log(listaTareas);
-		fetch("https://assets.breatheco.de/apis/fake/todos/user/karenvicent", {
-			method: "PUT",
-			headers: {
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify(listaTareas),
-		})
+		fetch(
+			"https://assets.breatheco.de/apis/fake/todos/user/IvanGonzalezRecruiter",
+			{
+				method: "PUT",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(listaTareas),
+			}
+		)
 			.then((resp) => {
 				console.log("STATUS");
 				console.log(resp.status);
