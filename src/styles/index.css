@@ -26,8 +26,8 @@ caja{
     justify-content: center;
 }
 h1{
-    color: rgb(208, 198, 187);
+    color: rgb(189, 208, 187);
 }
 body, .titulo{
-   background-color: rgb(244, 239, 239);
+   background-color: rgb(244, 244, 239);
 }

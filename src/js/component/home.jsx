@@ -166,9 +166,9 @@ const Home = () => {
 			</div>
 			<button
 				type="button"
-				className="btn btn-danger"
+				className="btn btn-success"
 				onClick={() => eliminarTodo()}>
-				Eliminar Todo
+				Borrar Todo
 			</button>
 		</div>
 	);
