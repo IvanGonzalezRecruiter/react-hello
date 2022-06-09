@@ -28,7 +28,7 @@ const Home = () => {
 				return resp.json();
 			})
 			.then((data) => {
-				console.log("console de la data");
+				console.log("ok");
 
 				//Aquí es donde debe comenzar tu código después de que finalice la búsqueda
 				console.log(data); //esto imprimirá en la consola el objeto exacto recibido del servidor
@@ -59,7 +59,7 @@ const Home = () => {
 				return resp.json();
 			})
 			.then((data) => {
-				console.log("console de la data");
+				console.log("ok");
 
 				//Aquí es donde debe comenzar tu código después de que finalice la búsqueda
 				console.log(data); //esto imprimirá en la consola el objeto exacto recibido del servidor
@@ -79,13 +79,16 @@ const Home = () => {
 		);
 		console.log(listaRemovida);
 		setListaTareas(listaRemovida);
-		fetch("https://assets.breatheco.de/apis/fake/todos/user/karenvicent", {
-			method: "PUT",
-			headers: {
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify(listaRemovida),
-		})
+		fetch(
+			"https://assets.breatheco.de/apis/fake/todos/user/IvanGonzalezRecruiter",
+			{
+				method: "PUT",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(listaRemovida),
+			}
+		)
 			.then((resp) => {
 				console.log("STATUS");
 				console.log(resp.status);
