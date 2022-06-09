@@ -107,12 +107,15 @@ const Home = () => {
 	};
 
 	useEffect(() => {
-		fetch("https://assets.breatheco.de/apis/fake/todos/user/karenvicent", {
-			method: "GET",
-			headers: {
-				"Content-Type": "application/json",
-			},
-		})
+		fetch(
+			"https://assets.breatheco.de/apis/fake/todos/user/IvanGonzalezRecruiter",
+			{
+				method: "GET",
+				headers: {
+					"Content-Type": "application/json",
+				},
+			}
+		)
 			.then((resp) => {
 				console.log("STATUS");
 				console.log(resp.status);
@@ -131,7 +134,7 @@ const Home = () => {
 	return (
 		<div className="caja">
 			<div className="titulo mx-auto" style={{ width: "50rem" }}>
-				<h1 className="text-center display-1">todos</h1>
+				<h1 className="text-center display-1">qué hay pa' hacer?</h1>
 			</div>
 			<div className="card mx-auto" style={{ width: "50rem" }}>
 				<ul className="list-group list-group-flush">
@@ -142,7 +145,7 @@ const Home = () => {
 							<input
 								className="border-0 text-muted fs-4 container-fluid"
 								type="text"
-								placeholder="What needs to be done?"
+								placeholder="qué hay pa' hacer?"
 								onChange={handleInputChange}
 								value={tareas}></input>
 						</form>
