@@ -8,7 +8,7 @@ const Home = () => {
 	const [isX, setIsX] = useState(false);
 	const [nuevatarea, setNuevatarea] = useState("");
 	useEffect(() => {
-		fetch("https://assets.breatheco.de/apis/fake/todos/user/EL225", {
+		fetch("http://assets.breatheco.de/apis/fake/todos/user/IvanGonzalezRecruiter", {
 			method: "GET",
 			headers: {
 				"Content-Type": "application/json",
@@ -67,7 +67,7 @@ const Home = () => {
 			});
 	};
 	const getTareas = () => {
-		fetch("https://assets.breatheco.de/apis/fake/todos/user/EL225", {
+		fetch("http://assets.breatheco.de/apis/fake/todos/user/IvanGonzalezRecruiter", {
 			method: "GET",
 			headers: {
 				"Content-Type": "application/json",
